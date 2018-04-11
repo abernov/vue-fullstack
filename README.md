@@ -1,14 +1,4 @@
 ![Logo](./assets/images/logo.png)
-# Packages updated
-- mongoose
-- i18n
-- element-ui
-- webpack
-
-and others
-
-Added element-ui select locale
-
 # Vue fullstack template
 ![](https://travis-ci.org/erguotou520/vue-fullstack.svg?branch=master)
 ![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)
