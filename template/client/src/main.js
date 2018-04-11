@@ -1,9 +1,9 @@
 import Vue from 'vue'
 // read localStorage stored data
 import './stored'
-{{#if i18n}}
+{{#if i18nEn}}
 // locale
-import './locales'
+import i18n from './locales'
 {{/if}}
 
 // router and store
@@ -28,6 +28,9 @@ import './socket'
 
 userPromise.then(() => {
   const app = new Vue({
+{{#if i18nEn}}
+    i18n,
+{{/if}}
     router,
     store,
     ...App // Object spread copying everything from App.vue

@@ -16,7 +16,7 @@
         </el-dropdown>
       </div>
       <!-- user settings -->
-      <el-dialog :title="$t('header.settings')" v-model="config.visible" size="small"
+      <el-dialog :title="$t('header.settings')" :visible.sync="config.visible" size="small"
         top="4%" @close="cancelConfig">
         <el-form class="noline" ref="config" label-position="top"
           :model="config.form" :rules="config.rules">
@@ -36,7 +36,7 @@
         </span>
       </el-dialog>
       <!-- change password -->
-      <el-dialog :title="$t('header.password')" v-model="password.visible" size="small" @close="cancelPassword">
+      <el-dialog :title="$t('header.password')" :visible.sync="password.visible" size="small" @close="cancelPassword">
         <el-form label-position="top" :model="password.form"
           :rules="password.rules" ref="password">
           <el-row :gutter="20">
@@ -70,9 +70,9 @@
 import { mapGetters, mapActions } from 'vuex'
 import { merge } from 'lodash'
 import { user as userResource } from 'resources'
-import locales from 'locales/header'
+import i18n from 'locales/header'
 export default {
-  locales,
+  i18n,
   data () {
     return {
       config: {

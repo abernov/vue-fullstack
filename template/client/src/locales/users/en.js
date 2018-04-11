@@ -18,6 +18,9 @@ export default {
     },
     action: {
       userExisted: 'User existed'
+    },
+    confirm: {
+      remove: 'This action will remove the selected user: {0} forever, still going on?'
     }
   }
 }

@@ -1,7 +1,9 @@
 module.exports = {
   root: true,
-  // https://github.com/vuejs/eslint-config-vue
-  extends: 'vue',
+  extends: [
+    // 'eslint:recommended',
+    'plugin:vue/recommended'
+  ],
   // required to lint *.vue files
   plugins: [
     'html'
@@ -15,8 +17,8 @@ module.exports = {
     "it": true,
     "describe": true
   },
-  parser: 'babel-eslint',
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module',
     allowImportExportEverywhere: false
   }

@@ -11,10 +11,10 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import locales from 'locales/menu'
+import i18n from 'locales/menu'
 import { Menu, Submenu, MenuItem, MenuItemGroup } from 'element-ui'
 export default {
-  locales,
+  i18n,
   computed: {
     ...mapGetters(['loggedIn'])
   },

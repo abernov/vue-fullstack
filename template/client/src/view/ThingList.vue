@@ -19,7 +19,7 @@
         </p>
       </el-card>
     </div>
-    <el-dialog :title="form._id ? $t('thing.edit.update') : $t('thing.edit.create')" v-model="formVisible">
+    <el-dialog :title="form._id ? $t('thing.edit.update') : $t('thing.edit.create')" :visible.sync="formVisible">
       <el-form :model="form" :rules="rules" ref="thing">
         <el-form-item :label="$t('thing.model.name')" prop="name">
           <el-input v-model="form.name"></el-input>
@@ -37,9 +37,9 @@
 </template>
 <script>
 import { thing as thingRes } from 'resources'
-import locales from 'locales/things'
+import i18n from 'locales/things'
 export default {
-  locales,
+  i18n,
   data () {
     return {
       formVisible: false,

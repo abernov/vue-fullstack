@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   user: {
     breadcrumb: {
       home: '首页',
@@ -18,6 +18,9 @@ export default {
     },
     action: {
       userExisted: '用户已存在'
+    },
+    confirm: {
+      remove: 'This action will remove the selected user: {0} forever, still going on?'
     }
   }
 }

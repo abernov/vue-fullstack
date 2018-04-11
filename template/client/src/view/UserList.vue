@@ -13,13 +13,13 @@
         <el-table-column property="username" :label="$t('user.model.username')" sortable min-width="120"></el-table-column>
         <el-table-column property="role" :label="$t('user.model.role')" min-width="90"></el-table-column>
         <el-table-column :label="$t('operation.operation')" align="center" width="120">
-          <template scope="scope">
+          <template slot-scope="scope">
             <el-button type="text" @click.native="deleteUser(scope.row)">{{$t('operation.remove')}}</el-button>
           </template>
         </el-table-column>
       </el-table>
     </data-table>
-    <el-dialog :title="$t('user.create.title')" v-model="formVisible" @close="cancelForm">
+    <el-dialog :title="$t('user.create.title')" :visible.sync="formVisible" @close="cancelForm">
       <el-form :model="form" :rules="rules" ref="form"
         :close-on-click-modal="false" :close-on-press-escape="false">
         <el-form-item :label="$t('user.model.username')" prop="username">
@@ -39,9 +39,9 @@
 <script>
 import DataTable from 'components/DataTable'
 import { user as userRes } from 'resources'
-import locales from 'locales/users'
+import i18n from 'locales/users'
 export default {
-  locales,
+  i18n,
   data () {
     return {
       search: {
@@ -101,7 +101,7 @@ export default {
       })
     },
     deleteUser (user) {
-      this.$confirm(`This action will remove the selected user: ${user.username} forever, still going on?`, this.$t('confirm.title'), {
+      this.$confirm(this.$t('user.confirm.remove', [user.username]), this.$t('confirm.title'), {
         type: 'warning'
       }).then(() => {
         userRes.delete({ _id: user._id }).then(() => {

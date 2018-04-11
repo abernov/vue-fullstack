@@ -20,9 +20,9 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import locales from 'locales/pagination'
+import i18n from 'locales/pagination'
 export default {
-  locales,
+  i18n,
   props: {
     current: {
       type: Number,

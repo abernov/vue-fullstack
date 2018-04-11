@@ -1,7 +1,7 @@
 <template>
   <div class="login-wrapper" v-show="!loggedIn">
     <div class="bg"></div>
-    <h1>{{$t('title')}}</h1>
+    <h1 v-t="'title'"></h1>
     <el-form ref="form" :model="form" :rules="rules"
       @submit.native.prevent="onSubmit">
       <el-form-item>
@@ -18,7 +18,7 @@
       </el-form-item>
       <el-form-item>
         <el-button class="login-button" :class="{error: loginError}" type="success"
-          native-type="submit" :loading="loading">{{$t('login.button')}}</el-button>
+          native-type="submit" :loading="loading" v-t="'login.button'"></el-button>
       </el-form-item>
     </el-form>
     <!-- <div class="lang">
@@ -31,9 +31,10 @@
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import locales from 'locales/login'
+import i18n from 'locales/login'
+
 export default {
-  locales,
+  i18n,
   data () {
     return {
       form: {

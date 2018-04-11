@@ -1,67 +1,150 @@
 import Vue from 'vue'
-import { Dialog, Autocomplete, Dropdown, DropdownMenu, DropdownItem, Input, InputNumber,
-  Radio, RadioGroup, RadioButton, Checkbox, CheckboxGroup, Switch, Select, Option,
-  OptionGroup, Button, ButtonGroup, Table, TableColumn, DatePicker, TimeSelect, TimePicker,
-  Popover, Tooltip, MessageBox, Breadcrumb, BreadcrumbItem, Form, FormItem, Tabs, TabPane,
-  Tag, Tree, Notification, Slider, Loading, Row, Col, Upload, Progress, Spinner,
-  Message, Badge, Card, Steps, Step } from 'element-ui'
+import {
+  Pagination,
+  Dialog,
+  Autocomplete,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
+  Input,
+  InputNumber,
+  Radio,
+  RadioGroup,
+  RadioButton,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
+  Switch,
+  Select,
+  Option,
+  OptionGroup,
+  Button,
+  ButtonGroup,
+  Table,
+  TableColumn,
+  DatePicker,
+  TimeSelect,
+  TimePicker,
+  Popover,
+  Tooltip,
+  Breadcrumb,
+  BreadcrumbItem,
+  Form,
+  FormItem,
+  Tabs,
+  TabPane,
+  Tag,
+  Tree,
+  Alert,
+  Slider,
+  Icon,
+  Row,
+  Col,
+  Upload,
+  Progress,
+  Badge,
+  Card,
+  Rate,
+  Steps,
+  Step,
+  Carousel,
+  CarouselItem,
+  Collapse,
+  CollapseItem,
+  Cascader,
+  ColorPicker,
+  Transfer,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer,
+  Loading,
+  MessageBox,
+  Message,
+  Notification,
+} from 'element-ui';
 
-Vue.component(Dialog.name, Dialog)
-Vue.component(Autocomplete.name, Autocomplete)
-Vue.component(Dropdown.name, Dropdown)
-Vue.component(DropdownMenu.name, DropdownMenu)
-Vue.component(DropdownItem.name, DropdownItem)
-Vue.component(Input.name, Input)
-Vue.component(InputNumber.name, InputNumber)
-Vue.component(Radio.name, Radio)
-Vue.component(RadioGroup.name, RadioGroup)
-Vue.component(RadioButton.name, RadioButton)
-Vue.component(Checkbox.name, Checkbox)
-Vue.component(CheckboxGroup.name, CheckboxGroup)
-Vue.component(Switch.name, Switch)
-Vue.component(Select.name, Select)
-Vue.component(Option.name, Option)
-Vue.component(OptionGroup.name, OptionGroup)
-Vue.component(Button.name, Button)
-Vue.component(ButtonGroup.name, ButtonGroup)
-Vue.component(Table.name, Table)
-Vue.component(TableColumn.name, TableColumn)
-Vue.component(DatePicker.name, DatePicker)
-Vue.component(TimeSelect.name, TimeSelect)
-Vue.component(TimePicker.name, TimePicker)
-Vue.component(Popover.name, Popover)
-Vue.component(Tooltip.name, Tooltip)
-Vue.component(Breadcrumb.name, Breadcrumb)
-Vue.component(BreadcrumbItem.name, BreadcrumbItem)
-Vue.component(Form.name, Form)
-Vue.component(FormItem.name, FormItem)
-Vue.component(Tabs.name, Tabs)
-Vue.component(TabPane.name, TabPane)
-Vue.component(Tag.name, Tag)
-Vue.component(Tree.name, Tree)
-Vue.component(Slider.name, Slider)
-Vue.component(Row.name, Row)
-Vue.component(Col.name, Col)
-Vue.component(Upload.name, Upload)
-Vue.component(Progress.name, Progress)
-Vue.component(Spinner.name, Spinner)
-Vue.component(Badge.name, Badge)
-Vue.component(Card.name, Card)
-Vue.component(Steps.name, Steps)
-Vue.component(Step.name, Step)
+import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.use(Loading.directive)
+Vue.use(Pagination);
+Vue.use(Dialog);
+Vue.use(Autocomplete);
+Vue.use(Dropdown);
+Vue.use(DropdownMenu);
+Vue.use(DropdownItem);
+Vue.use(Menu);
+Vue.use(Submenu);
+Vue.use(MenuItem);
+Vue.use(MenuItemGroup);
+Vue.use(Input);
+Vue.use(InputNumber);
+Vue.use(Radio);
+Vue.use(RadioGroup);
+Vue.use(RadioButton);
+Vue.use(Checkbox);
+Vue.use(CheckboxButton);
+Vue.use(CheckboxGroup);
+Vue.use(Switch);
+Vue.use(Select);
+Vue.use(Option);
+Vue.use(OptionGroup);
+Vue.use(Button);
+Vue.use(ButtonGroup);
+Vue.use(Table);
+Vue.use(TableColumn);
+Vue.use(DatePicker);
+Vue.use(TimeSelect);
+Vue.use(TimePicker);
+Vue.use(Popover);
+Vue.use(Tooltip);
+Vue.use(Breadcrumb);
+Vue.use(BreadcrumbItem);
+Vue.use(Form);
+Vue.use(FormItem);
+Vue.use(Tabs);
+Vue.use(TabPane);
+Vue.use(Tag);
+Vue.use(Tree);
+Vue.use(Alert);
+Vue.use(Slider);
+Vue.use(Icon);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Upload);
+Vue.use(Progress);
+Vue.use(Badge);
+Vue.use(Card);
+Vue.use(Rate);
+Vue.use(Steps);
+Vue.use(Step);
+Vue.use(Carousel);
+Vue.use(CarouselItem);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
+Vue.use(Cascader);
+Vue.use(ColorPicker);
+Vue.use(Transfer);
+Vue.use(Container);
+Vue.use(Header);
+Vue.use(Aside);
+Vue.use(Main);
+Vue.use(Footer);
+
+Vue.use(Loading.directive);
+
 try {
-  var a = MessageBox
-  var b = Message
-  var c = Notification
-  Vue.prototype.$loading = Loading.service
-  Vue.prototype.$msgbox = a
-  Vue.prototype.$alert = a.alert
-  Vue.prototype.$confirm = a.confirm
-  Vue.prototype.$prompt = a.prompt
-  Vue.prototype.$notify = c
-  Vue.prototype.$message = b
+  Vue.prototype.$loading = Loading.service;
+  Vue.prototype.$msgbox = MessageBox;
+  Vue.prototype.$alert = MessageBox.alert;
+  Vue.prototype.$confirm = MessageBox.confirm;
+  Vue.prototype.$prompt = MessageBox.prompt;
+  Vue.prototype.$notify = Notification;
+  Vue.prototype.$message = Message;
 } catch (e) {
   console.log(e)
 } finally {

@@ -51,15 +51,15 @@ module.exports = {
       "message": "Port that mock server listen at",
       "default": 7878
     },
-    "i18n": {
+    "i18nEn": {
       "type": "confirm",
       "message": "Need vue-i18n?"
     }
   },
   "filters": {
-    "tasks/replaceI18n.js": "!i18n",
+    "tasks/replaceI18n.js": "!i18nEn",
     "tasks/mock.js": "mock==='mock'",
-    "tasks/remove.js": "!i18n||mock==='mock'",
+    "tasks/remove.js": "!i18nEn||mock==='mock'",
     "mock/**/*": "mock==='mock'"
   },
   "skipInterpolation": "{client/**/*.vue,tasks/**/*.*}",
