@@ -22,9 +22,6 @@ var backendBase = {
   // MongoDB connection options
   mongo: {
     options: {
-      db: {
-        safe: true
-      }
     }
   }
 }{{/if_eq}}
